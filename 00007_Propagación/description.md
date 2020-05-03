@@ -1,8 +1,8 @@
-Como decíamos recién, las excepciones no abortan simplemente la evaluación del método, sino que también abortan la evaluación de toda la cadena de envío de mensajes.  
+Como decíamos recién, las excepciones no abortan simplemente la evaluación del método, sino que también abortan la evaluación de toda la cadena de envío de mensajes.
 
 Por ejemplo, si bien en el programa anterior `CuentaOrigen.debitar!(monto)` era un mensaje que podía lanzar una excepción....
 
-```ruby
+```python
 def debitar!(monto)
   if monto > @saldo
     raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{@saldo}"
@@ -14,7 +14,7 @@ end
 
 ...esta excepción no sólo evitaba que se evaluara `saldo -= monto`, sino que también evitaba que `CuentaDestino.depositar! monto` se enviara. Mirá el código de `realizar!` en `Transferencia`:
 
-```ruby
+```python
   def realizar!(origen, destino)
     origen.debitar! @monto
     destino.depositar! @monto
