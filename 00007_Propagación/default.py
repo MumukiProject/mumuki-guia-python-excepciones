@@ -1,10 +1,10 @@
-class Transferencia
-  def initialize(monto_a_transferir)
-    @monto = monto_a_transferir
-  end
-  
-  def realizar!(origen, destino)
-    origen.debitar! @monto
-    destino.depositar! @monto
-  end
-end
+class Transferencia:
+  def __init__(self, self, monto_a_transferir):
+    self.monto = monto_a_transferir
+
+
+  def realizar!(self, origen, destino):
+    origen.debitar! self.monto
+    destino.depositar! self.monto
+
+

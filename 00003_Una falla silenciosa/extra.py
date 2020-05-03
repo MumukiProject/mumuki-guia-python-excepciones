@@ -1,44 +1,44 @@
-class Transferencia
-  def initialize(monto_a_transferir)
-    @monto = monto_a_transferir
-  end
-  
-  def realizar!(origen, destino)
-    origen.debitar! @monto
-    destino.depositar! @monto
-  end
-end
+class Transferencia:
+  def __init__(self, self, monto_a_transferir):
+    self.monto = monto_a_transferir
 
-class CuentaOrigen
-  def initialize
-    @saldo = 20
-  end
-  
-  def debitar!(monto)
-    if monto <= @saldo
-      @saldo -= monto
-    end
-  end
-  
-  def saldo
-    @saldo
-  end
-end
 
-class CuentaDestino
-  def initialize
-    @saldo = 100
-  end
-  
-  def depositar!(monto)
-      @saldo += monto
-  end
-  
-  def saldo
-    @saldo
-  end
-end
+  def realizar!(self, origen, destino):
+    origen.debitar! self.monto
+    destino.depositar! self.monto
 
-transferencia = Transferencia.new(40)
-cuenta_origen = CuentaOrigen.new
-cuenta_destino = CuentaDestino.new
+
+
+class CuentaOrigen:
+  def __init_(self):
+    self.saldo = 20
+
+
+  def debitar!(self, monto):
+    if monto <= self.saldo
+      self.saldo -= monto
+
+
+
+  def sald(self):
+    self.saldo
+
+
+
+class CuentaDestino:
+  def __init_(self):
+    self.saldo = 100
+
+
+  def depositar!(self, monto):
+      self.saldo += monto
+
+
+  def sald(self):
+    self.saldo
+
+
+
+transferencia = Transferencia(40)
+cuenta_origen = CuentaOrigen
+cuenta_destino = CuentaDestino

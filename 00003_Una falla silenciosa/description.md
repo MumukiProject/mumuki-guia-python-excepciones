@@ -3,20 +3,20 @@ Que los objetos _fallen silenciosamente_ es malo porque perdemos la confianza en
 Esto no parece tan terrible cuando del vuelo de las golondrinas se trata, pero ¿y si estamos haciendo una transferencia bancaria?
 
 ```python
-class Transferencia
-  def initialize(monto_a_transferir)
-    @monto = monto_a_transferir
-  end
+class Transferencia:
+  def __init__(self, self, monto_a_transferir):
+    self.monto = monto_a_transferir
 
-  def realizar!(origen, destino)
-    origen.debitar! @monto
-    destino.depositar! @monto
-  end
-end
 
-transferencia = Transferencia.new(40)
-cuenta_origen = CuentaOrigen.new
-cuenta_destino = CuentaDestino.new
+  def realizar!(self, origen, destino):
+    origen.debitar! self.monto
+    destino.depositar! self.monto
+
+
+
+transferencia = Transferencia(40)
+cuenta_origen = CuentaOrigen
+cuenta_destino = CuentaDestino
 
 ```
 

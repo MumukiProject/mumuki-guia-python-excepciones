@@ -1,23 +1,23 @@
-class Golondrina
-  def initialize
-    @energia = 50
-  end
-  
-  def energia
-    @energia
-  end
-  
-  def comer_alpiste!(cantidad)
-    @energia += cantidad * 2
-  end
-  
+class Golondrina:
+  def __init_(self):
+    self.energia = 50
+
+
+  def energi(self):
+    self.energia
+
+
+  def comer_alpiste!(self, cantidad):
+    self.energia += cantidad * 2
+
+
   def volar_en_circulos!
-    if @energia < 20
+    if self.energia < 20
       raise "No tengo suficiente energía"
-    end
-    
-    @energia -= 20
-  end
-end
-  
-pepita = Golondrina.new
+
+
+    self.energia -= 20
+
+
+
+pepita = Golondrina

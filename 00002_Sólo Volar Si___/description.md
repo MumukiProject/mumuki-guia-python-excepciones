@@ -15,7 +15,7 @@ Si bien es fácil de entender, esto está claramente mal: la energía de `pepita
 > ```python
 > if dia.es_soleado?
 >   picnic.preparar!
-> end
+>
 > ```
 >
 > Sabiendo esto, modificá el método `volar_en_circulos!` para que sólo vuele (pierda energía) si puede.

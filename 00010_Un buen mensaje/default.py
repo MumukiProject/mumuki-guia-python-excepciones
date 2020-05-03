@@ -1,16 +1,16 @@
-class Golondrina
-  def initialize
-    @energia = 50
-  end
-  
-  def energia
-    @energia
-  end
-  
-  def comer_alpiste!(cantidad)
+class Golondrina:
+  def __init_(self):
+    self.energia = 50
+
+
+  def energi(self):
+    self.energia
+
+
+  def comer_alpiste!(self, cantidad):
     if cantidad <= 0
       raise "error!"
-    end
-    @energia += cantidad * 2
-  end
-end
+
+    self.energia += cantidad * 2
+
+

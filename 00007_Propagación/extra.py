@@ -1,24 +1,24 @@
-class Cuenta
-  def initialize(saldo_inicial)
-    @saldo = saldo_inicial
-  end
-  
-  def debitar!(monto)
-    if monto > @saldo
-      raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{@saldo}"
-    end
-    
-    @saldo -= monto
-  end
-  
-  def depositar!(monto)
-      @saldo += monto
-  end
-  
-  def saldo
-    @saldo
-  end
-end
+class Cuenta:
+  def __init__(self, self, saldo_inicial):
+    self.saldo = saldo_inicial
 
-cuenta_origen = Cuenta.new(20)
-cuenta_destino = Cuenta.new(100)
+
+  def debitar!(self, monto):
+    if monto > self.saldo
+      raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{self.saldo}"
+
+
+    self.saldo -= monto
+
+
+  def depositar!(self, monto):
+      self.saldo += monto
+
+
+  def sald(self):
+    self.saldo
+
+
+
+cuenta_origen = Cuenta(20)
+cuenta_destino = Cuenta(100)

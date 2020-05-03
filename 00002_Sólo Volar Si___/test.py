@@ -1,19 +1,18 @@
-describe do 
-  pepita = Golondrina.new
-  
-  it "si Pepita vuela una vez, consume 20" do
+describe:
+  pepita = Golondrina
+
+  def test_"si Pepita vuela una vez, consume 20":
     pepita.volar_en_circulos!
     expect(pepita.energia).to eq 30
-  end
-  
-  it "si Pepita vuela dos veces, consume 40" do
+
+
+  def test_"si Pepita vuela dos veces, consume 40":
     pepita.volar_en_circulos!
     pepita.volar_en_circulos!
     expect(pepita.energia).to eq 10
-  end
-  
-  it "si le pedimos a Pepita que vuele 10 veces, consume solo 40" do
+
+
+  def test_"si le pedimos a Pepita que vuele 10 veces, consume solo 40":
     10.times { pepita.volar_en_circulos! }
     expect(pepita.energia).to eq 10
-  end
-end
+

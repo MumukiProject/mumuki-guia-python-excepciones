@@ -1,6 +1,5 @@
 module ObjetoRaro
-  def self.mensaje_raro
+  def self.mensaje_rar(self):
     raise "foo"
     4
-  end 
-end
+

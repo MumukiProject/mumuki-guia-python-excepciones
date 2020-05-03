@@ -1,13 +1,13 @@
-class Golondrina
-  def initialize
-    @energia = 50
-  end
-  
-  def energia
-    @energia
-  end
-  
+class Golondrina:
+  def __init_(self):
+    self.energia = 50
+
+
+  def energi(self):
+    self.energia
+
+
   def volar_en_circulos!
-    @energia -= 20
-  end
-end
+    self.energia -= 20
+
+

@@ -3,23 +3,23 @@
 La primera versión del método `debitar!` en `CuentaOrigen` se veía aproximadamente así:
 
 ```python
-def debitar!(monto)
-  if monto <= @saldo
-    @saldo -= monto
-  end
-end
+def debitar!(self, monto):
+  if monto <= self.saldo
+    self.saldo -= monto
+
+
 ```
 
 Pero la segunda versión se ve así:
 
 ```python
-def debitar!(monto)
-  if monto > @saldo
-    raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{@saldo}"
-  end
+def debitar!(self, monto):
+  if monto > self.saldo
+    raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{self.saldo}"
 
-  @saldo -= monto
-end
+
+  self.saldo -= monto
+
 ```
 
 Mediante la sentencia `raise mensaje` lo que hicimos fue _lanzar una excepción_: provocar un error explícito que _interrumpe_ el flujo del programa.
@@ -28,11 +28,11 @@ Mediante la sentencia `raise mensaje` lo que hicimos fue _lanzar una excepción_
 >
 > ```python
 > module ObjetoRaro
->    def self.mensaje_raro
+>    def self.mensaje_rar(self):
 >       raise "foo"
 >       4
->    end
-> end
+>
+>
 > ```
 >
 > ...y pensá: ¿se retorna el 4? ¿Por qué?

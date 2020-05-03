@@ -3,22 +3,22 @@ Como decíamos recién, las excepciones no abortan simplemente la evaluación de
 Por ejemplo, si bien en el programa anterior `CuentaOrigen.debitar!(monto)` era un mensaje que podía lanzar una excepción....
 
 ```python
-def debitar!(monto)
-  if monto > @saldo
-    raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{@saldo}"
-  end
+def debitar!(self, monto):
+  if monto > self.saldo
+    raise "No se puede debitar, porque el monto $#{monto} es mayor al saldo $#{self.saldo}"
 
-  @saldo -= monto
-end
+
+  self.saldo -= monto
+
 ```
 
 ...esta excepción no sólo evitaba que se evaluara `saldo -= monto`, sino que también evitaba que `CuentaDestino.depositar! monto` se enviara. Mirá el código de `realizar!` en `Transferencia`:
 
 ```python
-  def realizar!(origen, destino)
-    origen.debitar! @monto
-    destino.depositar! @monto
-  end
+  def realizar!(self, origen, destino):
+    origen.debitar! self.monto
+    destino.depositar! self.monto
+
 ```
 
 A esto nos referimos cuando decimos que las excepciones interrupen el flujo del programa :sunglasses:.

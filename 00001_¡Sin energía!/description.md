@@ -1,21 +1,21 @@
 Recordemos a nuestra vieja amiga `pepita` y su método `volar_en_circulos!`. Ahora _evolucionó_ y es un objeto de la clase `Golondrina`:
 
 ```python
-class Golondrina
-  def initialize
-    @energia = 50
-  end
+class Golondrina:
+  def __init_(self):
+    self.energia = 50
 
-  def energia
-    @energia
-  end
+
+  def energi(self):
+    self.energia
+
 
   def volar_en_circulos!
-    @energia -= 20
-  end
-end
+    self.energia -= 20
 
-pepita = Golondrina.new
+
+
+pepita = Golondrina
 
 ```
 

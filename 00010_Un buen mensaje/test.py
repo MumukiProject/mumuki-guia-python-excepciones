@@ -1,21 +1,20 @@
-pepita = Golondrina.new
+pepita = Golondrina
 
-it "comer_alpiste! 0 debería fallar" do
+def test_"comer_alpiste! 0 debería fallar":
   expect { pepita.comer_alpiste! 0 }.to raise_error
-end
 
-it "comer_alpiste! -10 debería fallar" do
+
+def test_"comer_alpiste! -10 debería fallar":
   expect { pepita.comer_alpiste! -10 }.to raise_error
-end
 
-it "comer_alpiste! -10 debería lanzar un mensaje de error expresivo" do
+
+def test_"comer_alpiste! -10 debería lanzar un mensaje de error expresivo":
   begin
     pepita.comer_alpiste! -10
   rescue => e
-    expect(["positiv", "negativ", "cantidad", "menor", "cero", "0", "-10"].any? { |it| e.message.include?(it) }).to be true
-  end
-end
+    expect(["positiv", "negativ", "cantidad", "menor", "cero", "0", "-10"].any? { |it| e.message.include?(it) }).to be True
 
-it "comer_alpiste! 10 NO debería fallar" do
+
+
+def test_"comer_alpiste! 10 NO debería fallar":
   pepita.comer_alpiste! 10
-end
