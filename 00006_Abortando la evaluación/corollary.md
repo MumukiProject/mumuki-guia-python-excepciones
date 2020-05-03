@@ -1,0 +1,3 @@
+¡Bien hecho! :grin: 
+
+Sin embargo, las excepciones hacen más que sólo impedir que el resto del método se evalúe, sino que, cuando se lanzan, pueden abortar también la evaluación de todos los métodos de la cadena de envío de mensajes. Veamos por qué... 
